@@ -16,6 +16,18 @@ all are used in the different function and saved in our bucket:
 | index_title  |inverted index according to the titles in wikipidia articels |
 | index_anchor |inverted index according to the anchor in wikipidia articels |
 
+
+
+<h1> code structure and organization</h1>
+
+| Pickle File's Name | about the file |
+| ------------- | ------------- |
+| search_frontend  | containg all main fuction requeired in the project	 |
+| search_backend | contaning functinos that are being used in search_frontend  |
+| BM25  |containig BM25 class for use in function "search"|
+| inverted_index_gcp  |inverted index class |
+| creating_inverted_index_gcp |py file that creates all the pikle files in our bucket |
+
 <h1> Retrival Methodes:</h1>
 
 In our search engine we used different retrieval methods:
