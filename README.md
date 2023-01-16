@@ -26,7 +26,7 @@ all are used in the different function and saved in our bucket:
 | index_anchor |inverted index according to the anchor in wikipidia articels |
 
 
-<h1> Retrival Methodes:</h1>
+<h1> Retrival Methods:</h1>
 
 In our search engine we used different retrieval methods:
 
