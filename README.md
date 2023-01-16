@@ -3,7 +3,7 @@
 
 <h1> code structure and organization</h1>
 
-| Pickle File's Name | about the file |
+| File's Name | about the file |
 | ------------- | ------------- |
 | search_frontend  | containg all main fuction requeired in the project	 |
 | search_backend | contaning functinos that are being used in search_frontend  |
