@@ -11,7 +11,7 @@
 | inverted_index_gcp  |inverted index class |
 | creating_inverted_index_gcp |ipynb file that creates all the pikle files in our bucket |
 <h1> Pickle Files</h1>
-we created the folloing pickle files during our bulilding procees.
+we created the following pickle files during our bulilding procees.
 
 
 all are used in the different function and saved in our bucket:
