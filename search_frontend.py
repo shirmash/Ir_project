@@ -85,7 +85,7 @@ def search_body():
     # BEGIN SOLUTION
     tokenized_query = search_backend.tokenize(query)##tokenize query
     Q = search_backend.generate_query_tfidf_vector(tokenized_query, search_backend.index_body)##calculate query tfidf
-    cosine = search_backend.cosine_sim(search_backend.index_body, tokenized_query, Q, dir_n_body, 50)##calculate cosine
+    cosine = search_backend.cosine_sim(search_backend.index_body, tokenized_query, Q, dir_n_body,100)##calculate cosine
     top_N = [(doc_id, search_backend.index_body.titles[doc_id]) for doc_id, count in cosine]##add titles
     # END SOLUTION
     return jsonify(top_N)
@@ -121,7 +121,7 @@ def search_title():
         doc_w_pl = search_backend.read_posting_list(search_backend.index_title, word, dir_n_title)##get the word posting list
         res += [posting_tuple[0] for posting_tuple in  doc_w_pl ]##add doc id when word appear in doc
     res = sorted(search_backend.Counter(res).items(), key= lambda x:x[1], reverse = True)##count for each word how many distinct values there are
-    res = [(doc_id, search_backend.index_title.titles[doc_id]) for doc_id, count in res]##add titles
+    res = [(doc_id, search_backend.index_title.titles[doc_id]) for doc_id, count in res if doc_id in search_backend.index_title.titles]##add titles
     return jsonify(res)
 
 
@@ -157,7 +157,7 @@ def search_anchor():
         res += [posting_tuple[0] for posting_tuple in doc_w_pl]  ##add doc id when word appear in doc
     res = sorted(search_backend.Counter(res).items(), key=lambda x: x[1],
                  reverse=True)  ##count for each word how many distinct values there are
-    res = [(doc_id, search_backend.index_anchor.titles[doc_id]) for doc_id, count in res]##get matching titles
+    res = [(doc_id, search_backend.index_anchor.titles[doc_id]) for doc_id, count in res if doc_id in search_backend.index_anchor.titles]##get matching titles
     return jsonify(res)
 
 @app.route("/get_pagerank", methods=['POST'])
