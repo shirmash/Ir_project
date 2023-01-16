@@ -5,8 +5,8 @@
 
 | File's Name | about the file |
 | ------------- | ------------- |
-| search_frontend  | containg all main fuction requeired in the project	 |
-| search_backend | contaning functinos that are being used in search_frontend  |
+| search_frontend  | containing all main fuction requeired in the project	 |
+| search_backend | containing functinos that are being used in search_frontend  |
 | BM25  |containig BM25 class for use in function "search"|
 | inverted_index_gcp  |inverted index class |
 | creating_inverted_index_gcp |ipynb file that creates all the pikle files in our bucket |
