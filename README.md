@@ -7,7 +7,7 @@
 | ------------- | ------------- |
 | search_frontend  | containing all main fuction requeired in the project	 |
 | search_backend | containing functinos that are being used in search_frontend  |
-| BM25  |containig BM25 class for use in function "search"|
+| BM25  |containing BM25 class for use in function "search"|
 | inverted_index_gcp  |inverted index class |
 | creating_inverted_index_gcp |ipynb file that creates all the pikle files in our bucket |
 <h1> Pickle Files</h1>
